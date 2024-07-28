@@ -4,13 +4,14 @@ const morgan = require("morgan");
 const colors = require("colors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
-
+const path=require("path");
 //env config
 dotenv.config();
 
 //router import
 const userRoutes = require("./routes/userRoutes");
 const blogRoutes = require("./routes/blogRoutes");
+const teacherRoutes = require("./routes/teacherRoutes");
 
 //mongodb connection
 connectDB();
@@ -26,6 +27,7 @@ app.use(morgan("dev"));
 //routes
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/blog", blogRoutes);
+app.use("/api/v1/teacher", teacherRoutes);
 
 //static files 
 app.use(express.static(path.join(__dirname,'./client/build')))

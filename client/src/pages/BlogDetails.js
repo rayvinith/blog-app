@@ -57,13 +57,12 @@ const BlogDetails = () => {
   console.log(blog);
   return (
     <v>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="blog-form">
         <Box
           width={"50%"}
           border={3}
           borderRadius={10}
           padding={3}
-          margin="auto"
           boxShadow={"10px 10px 20px #ccc"}
           display="flex"
           flexDirection={"column"}
@@ -76,7 +75,7 @@ const BlogDetails = () => {
             padding={3}
             color="gray"
           >
-            Update A Pots
+            Update A Posts
           </Typography>
           <InputLabel
             sx={{ mb: 1, mt: 2, fontSize: "24px", fontWeight: "bold" }}

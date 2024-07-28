@@ -40,16 +40,25 @@ export default function BlogCard({
   };
   return (
     <Card
+    className=" text-black"
       sx={{
-        width: "40%",
-        margin: "auto",
-        mt: 2,
+        width: "100%",
+        height:"60vh",
+        backgroundColor:"#f0f0f0",
+        margin:"12px",
+        marginTop:"120px",
+        borderRadius:"12px",
         padding: 2,
-        boxShadow: "5px 5px 10px #ccc",
+        color:"black",
+        boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
         ":hover:": {
-          boxShadow: "10px 10px 20px #ccc",
+          backgroundColor: '#263238',
+          color:"white",
+          
         },
       }}
+
+      
     >
       {isUser && (
         <Box display={"flex"}>
@@ -63,19 +72,19 @@ export default function BlogCard({
       )}
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: red[500] }}  aria-label="recipe">
             {username}
           </Avatar>
         }
         title={username}
         subheader={time}
       />
-      <CardMedia component="img" height="194" image={image} alt="Paella dish" />
+      <CardMedia component="img" sx={{  height: '50%',maxWidth: 400 }} md={{height:"200vh"}} xs={{height:"200vh" }}  image={image} alt="blog-images" />
       <CardContent>
-        <Typography variant="h6" color="text.secondary">
+        <Typography variant="h6" className="text-black font-bold text-xs">
           Title : {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="h6" className="text-black">
           Description : {description}
         </Typography>
       </CardContent>

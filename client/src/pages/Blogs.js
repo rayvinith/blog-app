@@ -18,7 +18,7 @@ const Blogs = () => {
     getAllBlogs();
   }, []);
   return (
-    <div>
+    <div className="flex flex-wrap bg-white text-black">
       {blogs &&
         blogs.map((blog) => (
           <BlogCard

@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const blogModel = require("../models/blogModel");
 const userModel = require("../models/userModel");
 
+
 //GET ALL BLOGS
 exports.getAllBlogsController = async (req, res) => {
   try {
@@ -30,7 +31,9 @@ exports.getAllBlogsController = async (req, res) => {
 
 //Create Blog
 exports.createBlogController = async (req, res) => {
+  
   try {
+    
     const { title, description, image, user } = req.body;
     //validation
     if (!title || !description || !image || !user) {

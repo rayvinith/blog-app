@@ -38,8 +38,8 @@ const Register = () => {
     }
   };
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div >
+      <form onSubmit={handleSubmit} >
         <Box
           maxWidth={450}
           display="flex"
@@ -47,7 +47,8 @@ const Register = () => {
           alignItems="center"
           justifyContent={"center"}
           margin="auto"
-          marginTop={5}
+          marginTop={15}
+          
           boxShadow="10px 10px 20px #ccc"
           padding={3}
           borderRadius={5}
@@ -58,7 +59,7 @@ const Register = () => {
             padding={3}
             textAlign="center"
           >
-            Register
+           Admin Register
           </Typography>
           <TextField
             placeholder="name"
@@ -90,7 +91,10 @@ const Register = () => {
 
           <Button
             type="submit"
-            sx={{ borderRadius: 3, marginTop: 3 }}
+            sx={{bgcolor: "#263238", color:"white", borderRadius: 3, marginTop: 3,'&:hover': {
+              backgroundColor: '#263238',
+              color:"white",
+          }, }}
             variant="contained"
             color="primary"
           >
@@ -98,13 +102,16 @@ const Register = () => {
           </Button>
           <Button
             onClick={() => navigate("/login")}
-            sx={{ borderRadius: 3, marginTop: 3 }}
+            sx={{ bgcolor: "#263238", color:"white", borderRadius: 3, marginTop: 3 ,'&:hover': {
+              backgroundColor: '#263238',
+              color:"white",
+          },}}
           >
             Already Registerd ? Please Login
           </Button>
         </Box>
       </form>
-    </>
+    </div>
   );
 };
 

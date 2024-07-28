@@ -36,33 +36,37 @@ const CreateBlog = () => {
       console.log(error);
     }
   };
+
+
+
+
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="bog-card">
         <Box
           width={"50%"}
-          border={3}
+          boxShadow="10px 10px 20px #ccc"
           borderRadius={10}
           padding={3}
           margin="auto"
-          boxShadow={"10px 10px 20px #ccc"}
+         
           display="flex"
           flexDirection={"column"}
-          marginTop="30px"
+          marginTop="120px"
         >
           <Typography
-            variant="h2"
+            variant="h4"
             textAlign={"center"}
             fontWeight="bold"
             padding={3}
-            color="gray"
+            color="#263238"
           >
-            Create A Pots
+           Upload Notice
           </Typography>
           <InputLabel
             sx={{ mb: 1, mt: 2, fontSize: "24px", fontWeight: "bold" }}
           >
-            Title
+          Topic
           </InputLabel>
           <TextField
             name="title"
@@ -74,6 +78,7 @@ const CreateBlog = () => {
           />
           <InputLabel
             sx={{ mb: 1, mt: 2, fontSize: "24px", fontWeight: "bold" }}
+            
           >
             Description
           </InputLabel>
@@ -98,7 +103,10 @@ const CreateBlog = () => {
             variant="outlined"
             required
           />
-          <Button type="submit" color="primary" variant="contained">
+          <Button type="submit" color="primary" variant="contained" sx={{ bgcolor: "#263238", color:"white", borderRadius: 3, marginTop: 3 ,'&:hover': {
+            backgroundColor: '#263238',
+            color:"white",
+        },}}>
             SUBMIT
           </Button>
         </Box>
@@ -108,3 +116,5 @@ const CreateBlog = () => {
 };
 
 export default CreateBlog;
+
+

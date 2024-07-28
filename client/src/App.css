@@ -1,0 +1,168 @@
+:root {
+    --bg: white;
+    --textColor: black;
+    --softBg: #f0f0f0;
+    --softTextColor: #626262;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .dark {
+    --bg: #0f172a;
+    --textColor: #ddd;
+    --softBg: #1f273a;
+    --softTextColor: #a6a6a6;
+  }
+  
+  .light {
+    --bg: white;
+    --textColor: black;
+    --softBg: #f0f0f0;
+    --softTextColor: #626262;
+  }
+  
+  .container {
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--textColor);
+  }
+  
+  .wrapper {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  @media screen and (max-width: 1536px) {
+    .wrapper {
+      max-width: 1366px;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .wrapper {
+      max-width: 1024px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .wrapper {
+      max-width: 768px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      max-width: 640px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .wrapper {
+      max-width: 475px;
+    }
+  }
+  
+  .ql-container{
+    font-size: 28px !important;
+  }
+  
+  .quill > .ql-container > .ql-editor.ql-blank::before{
+    color: #b3b3b1;
+  }
+
+  .teacher-parent{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size:xx-large;
+    font-weight:bolder;
+  }
+
+  .teacher{
+    margin-top: 100px;
+    padding: 22px;
+    background-color: #fafafa;
+  }
+
+  .teacher-card{
+   display: flex;
+  flex-direction: row;
+   margin: 50px;
+   padding: 70px;
+   gap: 25px;
+   justify-content: space-evenly;
+ 
+  }
+  .card-border{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
+  }
+
+  .blog-card{
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;;
+  }
+
+  .teacher-image{
+    align-items: center;
+    justify-content: space-between;
+    margin-left:12px;
+    border-radius: 50px;
+  }
+
+  .teacher-name{
+    display: flex;
+    justify-content: space-between;
+    background-color:#ffffff;
+    color: black;
+    font-size: larger;
+    font-weight:bolder;
+    font-style: italic;
+  }
+
+  .teacher-footer{
+    display: flex;
+    flex-direction: row;
+    background-color:#ffffff;
+    color: black;
+    font-size:medium;
+    font-weight:400;
+    margin-top:22px;
+    padding: 6px;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .facebook-image{
+   margin-left: 12px;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+  }
+  /* @media screen and(max-width: 1280px) {
+    .teacher-image {
+        margin-left: 100px;
+    }
+  }
+  @media screen and(max-width: 468px) {
+    .teacher-image {
+        margin-left: 50px;
+    }
+  } */
