@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Box, Typography, TextField, Button } from "@mui/material";
 import toast from "react-hot-toast";
 import axios from "axios";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL
 const Register = () => {
   const navigate = useNavigate();
   //state
@@ -24,7 +25,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("/api/v1/user/register", {
+      const { data } = await axios.post(`${API_BASE_URL}/api/v1/user/register`, {
         username: inputs.name,
         email: inputs.email,
         password: inputs.password,
