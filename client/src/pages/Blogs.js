@@ -19,7 +19,7 @@ const Blogs = () => {
     getAllBlogs();
   }, []);
   return (
-    <div className="flex flex-wrap bg-white text-black">
+    <div className="flex flex-col align-items-center justify-center bg-white text-black">
       {blogs &&
         blogs.map((blog) => (
           <BlogCard

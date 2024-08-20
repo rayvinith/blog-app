@@ -37,7 +37,10 @@ const UserBlogs = () => {
           />
         ))
       ) : (
-        <h1 className=" " style={{marginTop:"200px"}}>You Havent Created a blog ? Create your First One  </h1>
+        <div className="flex flex-col gap-10">
+        <h1 className="text-5xl text-center  font-bold  text-cyan-950  " style={{marginTop:"200px"}}>You Havent Created a blog ? Create your First One  </h1>
+        <a className="text-3xl text-center  font-bold  text-slate-500   " href="/create-blog">click here</a>
+</div>
       )}
     </div>
   );

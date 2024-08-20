@@ -52,7 +52,7 @@ const Header = () => {
   const menuItems = [
     // { label: "HOME", link: "/" },
     // { label: "ABOUT", link: "/about" },
-    { label: "ALL NOTICES", link: "/all-blogs" },
+    { label: "ALL NOTICES", link: "/" },
     // { label: "Teachers", link: "/all-teachers" },
     // { label: "Alumni", link: "/all-alumini" },
     // { label: "Fest", link: "/all-fests" },
@@ -60,8 +60,8 @@ const Header = () => {
   ];
 
   const loginMenuItems = [
-    { label: "MY SPACE", link: "/my-blogs" },
-    { label: "Create Notice", link: "/create-blog" },
+    { label: "My Blog", link: "/my-blogs" },
+    { label: "Create Blog", link: "/create-blog" },
     // { label: "Create Assignment", link: "/create-teacher" },
   ];
 

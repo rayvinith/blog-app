@@ -42,8 +42,10 @@ export default function BlogCard({
     <Card
     className=" text-black"
       sx={{
-        width: "100%",
+        width: "50vw",
         height:"60vh",
+        alignItems:"center",
+        justifyContent:"center",
         backgroundColor:"#f0f0f0",
         margin:"12px",
         marginTop:"120px",
@@ -79,7 +81,11 @@ export default function BlogCard({
         title={username}
         subheader={time}
       />
-      <CardMedia component="img" sx={{  height: '50%',maxWidth: 400 }} md={{height:"200vh"}} xs={{height:"200vh" }}  image={image} alt="blog-images" />
+      <CardMedia component="img" 
+      sx={{height: '30vh',maxWidth: "50vw" , alignItems:"center",justifyContent: 'center'}} 
+      
+     
+      image={image} alt="blog-images" />
       <CardContent>
         <Typography variant="h6" className="text-black font-bold text-xs">
           Title : {title}
