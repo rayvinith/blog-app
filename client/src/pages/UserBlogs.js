@@ -37,7 +37,7 @@ const UserBlogs = () => {
           />
         ))
       ) : (
-        <h1 className="m-100 mt-100 mb-100">You Havent Created a blog ? Create your First One  </h1>
+        <h1 className=" " style={{marginTop:"200px"}}>You Havent Created a blog ? Create your First One  </h1>
       )}
     </div>
   );

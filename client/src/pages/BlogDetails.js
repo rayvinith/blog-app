@@ -41,7 +41,7 @@ const BlogDetails = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put(`/api/v1/blog/update-blog/${id}`, {
+      const { data } = await axios.put(`${API_BASE_URL}/api/v1/blog/update-blog/${id}`, {
         title: inputs.title,
         description: inputs.description,
         image: inputs.image,
@@ -57,13 +57,14 @@ const BlogDetails = () => {
   };
   console.log(blog);
   return (
-    <v>
-      <form onSubmit={handleSubmit} className="blog-form">
+    <div>
+      <form onSubmit={handleSubmit}>
         <Box
           width={"50%"}
           border={3}
           borderRadius={10}
           padding={3}
+          margin="auto"
           boxShadow={"10px 10px 20px #ccc"}
           display="flex"
           flexDirection={"column"}
@@ -76,7 +77,7 @@ const BlogDetails = () => {
             padding={3}
             color="gray"
           >
-            Update A Posts
+            Update A Pots
           </Typography>
           <InputLabel
             sx={{ mb: 1, mt: 2, fontSize: "24px", fontWeight: "bold" }}
@@ -122,7 +123,7 @@ const BlogDetails = () => {
           </Button>
         </Box>
       </form>
-    </v>
+    </div>
   );
 };
 
